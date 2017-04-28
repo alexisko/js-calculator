@@ -28,40 +28,65 @@ function calculatorModule() {
      */
     getTotal: function() {
       return total;
+    },
+
+    /**
+     * Sums the value passed in with `total`
+     * @param { Number } x
+     */
+    add: function(num) {
+      if(typeof num === "number") {
+        total += num;
+        return total;
+      }
+      return "Error: thats not a number, try again!\n";
+    },
+
+    /**
+     * Subtracts the value passed in from `total`
+     * @param  { Number } x
+     */
+    subtract: function(num) {
+      if(typeof num === "number") {
+        total -= num;
+        return total;
+      }
+      return "Error: thats not a number, try again!\n";
+    },
+
+    /**
+     * Multiplies the value by `total`
+     * @param  { Number } x
+     */
+    multiply: function(num) {
+      if(typeof num === "number") {
+        total *= num;
+        return total;
+      }
+      return "Error: thats not a number, try again!\n";
+    },
+
+    /**
+     * Divides the value passing in by `total`
+     * @param  { Number } x
+     */
+    divide: function(num) {
+      if(typeof num === "number") {
+        total /= num;
+        return total;
+      }
+      return "Error: thats not a number, try again!\n";
     }
   };
 
   return calculator;
 }
 
-  
-
 
   
 
 
-  /**
-   * Sums the value passed in with `total`
-   * @param { Number } x
-   */
-
-
-  /**
-   * Subtracts the value passed in from `total`
-   * @param  { Number } x
-   */
-
-
-  /**
-   * Multiplies the value by `total`
-   * @param  { Number } x
-   */
-
-
-  /**
-   * Divides the value passing in by `total`
-   * @param  { Number } x
-   */
+  
 
 
   /**
