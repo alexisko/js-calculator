@@ -6,7 +6,7 @@
  * @return {object} `calculator` object that can be used
  */
 function calculatorModule() {
-  var memory = 0, total = 0;
+  var _memory = 0, _total = 0;
 
     /**
      * sets the `total` to the number passed in
@@ -15,8 +15,8 @@ function calculatorModule() {
      */
      function load() {
       if(typeof num === "number") {
-        total = num;
-        return total;
+        _total = num;
+        return _total;
       }
       throw new Error("thats not a number, try again!\n");
     }
@@ -26,7 +26,7 @@ function calculatorModule() {
      * @return { Number }
      */
      function getTotal() {
-      return total;
+      return _total;
      }
 
     /**
@@ -35,8 +35,8 @@ function calculatorModule() {
      */
      function add(num) {
       if(typeof num === "number") {
-        total += num;
-        return total;
+        _total += num;
+        return _total;
       }
       throw new Error("thats not a number, try again!\n");
      }
@@ -47,8 +47,8 @@ function calculatorModule() {
      */
      function subtract() {
       if(typeof num === "number") {
-        total -= num;
-        return total;
+        _total -= num;
+        return _total;
       }
       throw new Error("thats not a number, try again!\n");
      }
@@ -59,8 +59,8 @@ function calculatorModule() {
      */
      function multiply(num) {
       if(typeof num === "number") {
-        total *= num;
-        return total;
+        _total *= num;
+        return _total;
       }
       throw new Error("thats not a number, try again!\n");
      }
@@ -71,8 +71,8 @@ function calculatorModule() {
      */
      function divide(num) {
       if(typeof num === "number") {
-        total /= num;
-        return total;
+        _total /= num;
+        return _total;
       }
       throw new Error("thats not a number, try again!\n");
      }
@@ -82,21 +82,21 @@ function calculatorModule() {
      * @return { Number }
      */
      function recallMemory() {
-      return memory;
+      return _memory;
      }
 
     /**
      * Stores the value of `total` to `memory`
      */
      function saveMemory() {
-      memory = total;
+      _memory = total;
      }
 
     /**
      * Clear the value stored at `memory`
      */
      function clearMemory() {
-      memory = 0;
+      _memory = 0;
      }
 
     /**
@@ -104,7 +104,6 @@ function calculatorModule() {
      */
 
   return {
-      load: load,
       getTotal: getTotal,
       add: add,
       subtract: subtract,
