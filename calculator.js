@@ -63,7 +63,7 @@ function calculatorModule() {
         total *= num;
         return total;
       }
-      return "Error: thats not a number, try again!\n";
+      throw new Error("thats not a number, try again!\n");
     },
 
     /**
